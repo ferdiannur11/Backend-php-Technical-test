@@ -27,12 +27,11 @@ Follow these steps to set up the project:
 
 ```bash
 git clone https://github.com/yourusername/your-laravel-project.git
-
-Install Dependencies
+```
+### 2. Install Dependencies
 composer install
 
-Set Up the Environment
-
+### 3. Set Up the Environment
 cp .env.example .env
 
 DB_CONNECTION=mysql
@@ -42,18 +41,18 @@ DB_DATABASE=your_database_name
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 
-
-Generate Application Key
+### 4. Generate Application Key
 php artisan key:generate
 
-Migrate the Database
+### 5. Migrate the Database
 php artisan migrate
 
-Seed the Database (Optional)
+### 6. Seed the Database (Optional)
 php artisan db:seed
 
-Run Project
+### 7. Run the Development Server
 php artisan serve
 
-Running Tests
-php artisan test
+### 8. Run Unit Tests (Optional)
+vendor/bin/phpunit
+
