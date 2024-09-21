@@ -31,10 +31,7 @@ class AuthorsControllerTest extends TestCase
      */
     public function test_get_authors()
     {
-        // Buat author dengan factory
         $author = Authors::factory()->create();
-
-        // Pastikan data tersedia
         $response = $this->get(route('authors.getAll'));
         $response->assertStatus(200);
     }
@@ -44,16 +41,13 @@ class AuthorsControllerTest extends TestCase
      */
     public function test_update_author()
     {
-        // Buat author menggunakan factory
         $author = Authors::factory()->create();
-
         $updatedData = [
             "name" => "Jane Doe",
             "bio" => "An experienced developer who enjoys solving problems.",
             "birth_date" => "1990-05-15"
         ];
 
-        // Gunakan ID dari author yang dibuat untuk update
         $this->put(route('authors.update', ['id' => $author->id]), $updatedData)
             ->assertStatus(200);
     }
@@ -63,10 +57,7 @@ class AuthorsControllerTest extends TestCase
      */
     public function test_delete_author()
     {
-        // Buat author menggunakan factory
         $author = Authors::factory()->create();
-
-        // Gunakan ID dari author yang dibuat untuk delete
         $this->delete(route('authors.delete', ['id' => $author->id]))
             ->assertStatus(200);
     }

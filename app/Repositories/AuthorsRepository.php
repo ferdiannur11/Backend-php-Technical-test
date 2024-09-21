@@ -6,13 +6,11 @@ use App\Models\Authors;
 
 class AuthorsRepository
 {
-     // Get all authors
      public function getAll()
      {
          return Authors::all();
      }
 
-     // Get author by ID
      public function getById($id)
      {
          return Authors::find($id);
@@ -23,7 +21,6 @@ class AuthorsRepository
          return Authors::create($data);
      }
 
-     // Update an author by ID
      public function update($id, array $data)
      {
          $author = Authors::find($id);
@@ -34,7 +31,6 @@ class AuthorsRepository
          return null;
      }
 
-     // Delete an author by ID
      public function delete($id)
      {
          $author = Authors::find($id);

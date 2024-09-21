@@ -43,15 +43,10 @@ class BooksRepository
 
      public function getBooksByAuthor($author_id)
     {
-        // Fetch the author along with their books
         $author = Authors::with('books')->find($author_id);
-
-        // If no author found, return null
         if (!$author) {
             return null;
         }
-
-        // Create the custom response structure
         return [
             'id' => $author->id,
             'name' => $author->name,

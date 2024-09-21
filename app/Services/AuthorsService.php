@@ -13,14 +13,11 @@ class AuthorsService
         $this->authorsRepository = $authorsRepository;
     }
 
-
-    // Get all authors
     public function getAll()
     {
         return $this->authorsRepository->getAll();
     }
 
-    // Get author by ID
     public function getById($id)
     {
         return $this->authorsRepository->getById($id);
@@ -32,13 +29,11 @@ class AuthorsService
         return $this->authorsRepository->create($validatedData);
     }
 
-    // Update author by ID
     public function update($id, array $data)
     {
         return $this->authorsRepository->update($id, $data);
     }
 
-    // Delete author by ID
     public function delete($id)
     {
         return $this->authorsRepository->delete($id);

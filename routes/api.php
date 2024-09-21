@@ -34,12 +34,3 @@ Route::put('/books/{id}', [BooksController::class, 'update'])->name('books.updat
 Route::delete('/books/{id}', [BooksController::class, 'destroy'])->name('books.delete');
 
 Route::get('/authors/{id}/books', [BooksController::class, 'getBooksByAuthor']);
-
-
-
-// Route::get('/approvers', [ApproverController::class, 'index']);
-// Route::post('/approval-stage', [ApprovalStageController::class, 'store']);
-// Route::put('/approval-stages/{id}', [ApprovalStageController::class, 'update']);
-// Route::post('/expense', [ExpenseController::class, 'store'])->name('expense.create');
-// Route::patch('/expense/{id}/approve', [ExpenseController::class, 'approve']);
-// Route::get('/expense/{id}', [ExpenseController::class, 'show'])->name('expense.get');
